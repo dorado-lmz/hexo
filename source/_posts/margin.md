@@ -25,34 +25,6 @@ margin不会显示背景
 
 ## 例子:等高布局
 
-```html+
-<div class="box">
-  <div class="a">sdf<br/>sdf</div>
-  <div class="b">sdfa</div>
-</div>
-```
-```css+
-.box{
-  overflow:hidden;
-}
-.a,.b{
-  float:left;
-  margin-bottom:-600px;
-  padding-bottom:600px;
-}
-
-.a{
-  background:red;
-  width:50%;
-}
-.b{
-  background:blue;
-  width:50%;
-}
-```
-
-
-
 {% tabbed_codeblock %}
   <!-- tab html -->
 <div class="box">
@@ -80,15 +52,18 @@ margin不会显示背景
 }
   <!-- endtab -->
 {% endtabbed_codeblock %}
+
 # 负值
 ## 例子:布局
-```html
+
+{% tabbed_codeblock %}
+  <!-- tab html -->
 <div class='container'>
   <div class="content">content width:100%,将sidebar挤到下一行.siderbar margin-left取负值,将移动到上一行</div>
 </div>
 <div class='sidebar'>siderbar</div>
-```
-```css
+  <!-- endtab -->
+  <!-- tab css -->
 .container{
   float:left;
   width:100%;
@@ -103,14 +78,16 @@ margin不会显示背景
   float:left;
   background:lightblue;
 }
-
-```
+  <!-- endtab -->
+{% endtabbed_codeblock %}
 # margin重叠
-## 
+##
 
 # 改变元素宽度
 ## 例子:宽度变大
-```html
+
+{% tabbed_codeblock %}
+  <!-- tab html -->
 <div id="test-width">No2父元素
     <p id="test-block">我是No2子元素 </p>
 </div>
@@ -118,8 +95,8 @@ margin不会显示背景
 <div id="test-width2">No2父元素
     <p id="test-block2">我是No2子元素 </p>
 </div>
-```
-```css
+  <!-- endtab -->
+  <!-- tab css -->
 #test-width, #test-width2 {
     text-align: center;
     margin-right: auto;
@@ -135,8 +112,9 @@ margin不会显示背景
     margin-right: -100px;
     margin-left: -100px;
 }
+  <!-- endtab -->
+{% endtabbed_codeblock %}
 
-```
 因为P为block元素且没有指定width，则p的width+padding+border+margin=父级div的width（这里都是说的水平方向,垂直方向会发生重叠）。
 这里假定padding,border为0。父级div width为400px。p的width为inherit。不设置margin，则p的width为400px。正如text-block。
 
