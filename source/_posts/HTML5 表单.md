@@ -1,3 +1,10 @@
+---
+title: flex布局
+date: 2017-01-05 14:50:00
+tags: html5 tag
+categories: html5
+---
+
 # HTML5 表单
 > HTML5在原有表单的基础上，参照Xform的一些验证功能，制定了新型功能性表单。
 
